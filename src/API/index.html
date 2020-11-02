@@ -24,53 +24,43 @@
         max-width: 500px
       }
 
-      .note{
+      .p__msg{
         font-size: small;
-        color: #9B9B9B;
+        color: #badc58;
       }
 
-      .content{
+      .content__c{
         margin: 50px;
         position: fixed;
       }
 
-      #loader:after {
+      #loader__l:after {
         overflow: hidden;
         display: inline-block;
         vertical-align: bottom;
-        animation: ellipsis steps(4,end) 1000ms infinite;
+        animation: loadingan steps(4,end) 1000ms infinite;
         content: "\2026";
         width: 0px;
       }
 
-      @keyframes ellipsis {
+      @keyframes loadingan {
         to {
           width: 1.25em
         }
-      }
-
-      canvas#background {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
       }
   </style>
 </head>
 <body>
      <main>
-      <div class="content">
-        <p class="status">
-          <span id="message">Loading</span>
-          <span id="loader" ></span>
+      <div class="content__c">
+        <p>
+          <span id="loading__msg">Loading</span>
+          <span id="loader__l" ></span>
         </p>
-        <p class="note">
+        <p class="p__msg">
           This might take 2-5 seconds to load. Please stand by.
         </p>
       </div>
     </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 </body>
 </html>
